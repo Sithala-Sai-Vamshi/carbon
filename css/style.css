@@ -1,0 +1,53 @@
+/* ========= root palette ========= */
+:root{
+  --bg: #eef7f1;
+  --fg: #1d1d1d;
+  --card: #ffffffdd;
+  --green: #28a745;
+  --accent: #0077b6;
+}
+body.dark{
+  --bg: #101418;
+  --fg: #f6f6f6;
+  --card: #1b1f24dd;
+}
+/* ========= GLOBAL ========= */
+*{box-sizing:border-box;font-family:system-ui,Segoe UI,Roboto;}
+body{
+  margin:0;
+  background:var(--bg) url('https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?auto=format&fit=crop&w=1920&q=80') fixed center/cover;
+  color:var(--fg);
+  transition:0.3s;
+}
+a{color:var(--accent);}
+.btn{
+  background:var(--green);color:#fff;border:none;border-radius:6px;padding:.7rem 1.2rem;cursor:pointer;font-weight:600;
+}
+.wide{width:100%;}
+.glass{backdrop-filter:blur(10px);border-radius:16px;padding:1.5rem;}
+.auth-card{max-width:320px;margin:10vh auto;}
+.avatar{width:40px;height:40px;border-radius:50%;cursor:pointer;}
+/* ========= Layout ========= */
+.topbar{
+  display:flex;align-items:center;gap:.8rem;padding:.6rem 1rem;position:sticky;top:0;z-index:10;
+}
+.grid{
+  display:grid;
+  grid-template-columns:minmax(260px,1fr) 3fr;
+  gap:1.5rem;
+  padding:1.5rem;
+}
+.card{
+  background:var(--card);border-radius:16px;padding:1.5rem;box-shadow:0 4px 10px #0002;
+}
+/* Stats boxes */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1rem;margin:1.2rem 0;}
+.stat-box{background:var(--bg);padding:.8rem;border-radius:12px;text-align:center;font-weight:600;}
+.score-wrap{display:flex;flex-direction:column;align-items:flex-start;gap:.4rem}
+/* Tips list */
+.tips ul{padding-left:1.2rem;}
+/* Responsive */
+@media(max-width:750px){
+  .grid{grid-template-columns:1fr;}
+  .topbar h1{font-size:1.4rem;}
+}

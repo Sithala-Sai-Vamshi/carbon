@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenTrack • Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="js/auth.js" defer></script>
 </head>
-<body>
-    
+<body class="light">
+  <main class="auth-card glass">
+    <h1>🌿 GreenTrack</h1>
+
+    <!-- GOOGLE  -->
+    <button id="googleBtn" class="btn wide">Sign‑in with Google</button>
+
+    <p>— or —</p>
+
+    <!-- EMAIL/PASSWORD -->
+    <form id="emailForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button class="btn" type="submit">Continue</button>
+    </form>
+
+    <p id="authMsg"></p>
+  </main>
 </body>
 </html>
